@@ -1,0 +1,26 @@
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+yum install jenkins
+
+To know the status of Jenkins:
+sudo service jenkins status
+
+To start the Jenkins:
+sudo service jenkins start
+
+To stop the Jenkins:
+sudo service jenkins stop
+
+To restart the Jenkins:
+sudo service jenkins restart
+
+how to integrate github with jenkins?
+-create a sample program
+-create a jenkins job
+-add this program to github
+-add git plugin in jenkins
+configure jenkins job
+
+
+Continuous Delivery Pipeline (Build, Deploy, Automation Test, Release)
+https://www.youtube.com/watch?v=Sz_i1digIZU

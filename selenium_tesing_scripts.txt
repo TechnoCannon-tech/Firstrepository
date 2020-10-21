@@ -1,0 +1,105 @@
+load your website on Firefox:
+package pack1;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+public class firefoxexa {
+	public static void main(String[] args) {
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://www.youtube.com/watch?v=cfxW2AtHk-k");
+	}
+}
+
+Selenium How to use WebDriver Manager for Beginners with examples and demo
+https://www.youtube.com/watch?v=8vWTgyoG0nc&list=PLhW3qG5bs-L_s9HdC5zNshE5Ti8jABwlU&index=7
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
+public class SeleniumTest {
+	public static void main(String[] args) {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://google.com");
+		driver.close();
+		driver.quit();
+	}
+}
+
+Facebook sign_up testing
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class SeleniumTest {
+	public static void main(String[] args) {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.facebook.com");
+		driver.findElement(By.id("u_0_2")).click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			
+		}
+		WebElement fname= driver.findElement(By.name("firstname"));
+		fname.sendKeys("Asd");
+		WebElement lname= driver.findElement(By.name("lastname"));
+		lname.sendKeys("qwer");
+		WebElement mail= driver.findElement(By.name("reg_email__"));
+		mail.sendKeys("Asd@gmail.com");
+		driver.findElement(By.name("reg_passwd__")).sendKeys("Asd@gmail.com");
+		driver.findElement(By.id("day")).sendKeys("20");
+		driver.findElement(By.id("month")).sendKeys("Jan");
+		driver.findElement(By.id("year")).sendKeys("2018");
+		WebElement gender= driver.findElement(By.id("u_1_5"));
+		gender.click();
+		}}
+
+Guru99 Demo Site
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class SeleniumTest {
+	public static void main(String[] args) throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+                               //use to open web broser
+		driver.get("http://demo.guru99.com/test/newtours/login.php");
+                              //use to maximize web broser
+		driver.manage().window().maximize();
+		WebElement fname= driver.findElement(By.name("userName"));
+		fname.sendKeys("Asd");
+		WebElement lname= driver.findElement(By.name("password"));
+		lname.sendKeys("qwer");
+                                //waiting.....
+		Thread.sleep(5000);
+	                driver.findElement(By.xpath("//a[@href='login.php']")).click();
+		WebElement signup = driver.findElement(By.name("userName"));
+		signup.sendKeys("signup");
+		WebElement signup_password = driver.findElement(By.name("password"));
+		signup_password.sendKeys("password");
+		Thread.sleep(5000);
+		driver.findElement(By.name("submit")).click();
+		driver.findElement(By.xpath("//a[@href='support.php']")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//a[@href='page-1.html']")).click();
+		Thread.sleep(5000);
+		System.out.println("Login Done with Submit");
+
+	}
+	
+
+}
+
+

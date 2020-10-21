@@ -1,0 +1,36 @@
+
+#is use to save your webseite from attackers to save  your server info
+cd /etc/apache2
+vi apache2.conf
+ServerSignature off
+ServerTokens prod
+
+#save the file info from attackers  or internal info. 
+cd /etc/apache2
+vi apache2.conf
+<Directory /var/www/html>
+Options -Indexes
+</Directory>
+
+#save server info
+we can reinstall apache2 server version
+sudo apt-get install apache2 --reinstall
+cd /etc/apache2
+vi apache2.conf
+<Directory "var/www/html">
+LimitRequestBody 10000
+</Directory>
+
+
+#restrict  access  to main derectory or root directory
+<Directory /var/www/html>
+Option None
+Order deny,allow
+Deny from all     protect your server fro unautorize
+</Directory>
+                             
+
+restrict access to partucalr directory on your server.....
+<Directory />
+Options  - FollowSymLinks
+</Directory>  

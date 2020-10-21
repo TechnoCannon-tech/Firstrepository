@@ -1,0 +1,6 @@
+code=>    github
+integration=>  jenkins
+build=>   maven
+test=>     selinim
+deploy=>   docker,chef,puppet,aws
+monitor=>  ansible

@@ -1,0 +1,8 @@
+#protecting the server against IP spoofing
+go to /etc directory
+sudo vi /etc/host.conf
+add 
+1..order bind,hosts 
+2..nospoof on
+and reboot the server
+sudo reboot now
