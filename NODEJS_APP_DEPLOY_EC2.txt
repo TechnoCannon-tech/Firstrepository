@@ -1,0 +1,23 @@
+How to deploy Node.js application on AWS with Github
+Install NodeJS and NPM using nvm
+Install Git and clone repository from GitHub
+Install dependencies
+Run the application
+Configure security group to access via public URL
+Access the application in browser
+
+Install NodeJS and NPM using nvm
+Install node version manager (nvm) by typing the following at the command line.
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+nvm install node
+node -v
+npm -v
+sudo yum update -y
+sudo yum install git -y
+git clone https://github.com/sumant-mishra/node-app.git
+cd node-app
+npm install
+Start the application
+To start the application, run the below command in the terminal:
+node index.js
+Configure security group to access via public URL
